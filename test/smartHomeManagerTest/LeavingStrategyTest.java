@@ -1,26 +1,23 @@
 package smartHomeManagerTest;
 
-import org.junit.Ignore;
+import org.junit.Test;
+import smartHomeManager.LeavingStrategy;
+import smartHomeManager.SmartHomeComponent;
+import smartHomeManager.SmartHomeDevice;
 
+/**
+ * @author Adambo
+ */
 public class LeavingStrategyTest {
+	/**
+	 * Run the void execute(SmartHomeComponent) method test.
+	 */
+	@Test
+	public void testExecute_1()
+		throws Exception {
+		LeavingStrategy leavingStrategy = new LeavingStrategy();
+		SmartHomeComponent shc = new SmartHomeDevice("", "", "", 1.0);
+		leavingStrategy.execute(shc);
+	}
 
-    @Ignore
-    public void testExecute() throws Exception {
-
-    }
-
-    @Ignore
-    public void testPrintComponent() throws Exception {
-
-    }
-
-    @Ignore
-    public void testChangeStatus() throws Exception {
-
-    }
-
-    @Ignore
-    public void testIterate() throws Exception {
-
-    }
 }

@@ -17,7 +17,7 @@ public class SwitchOffStrategy implements StrategieIF {
         iterate(shc);
     }
 
-    public void printComponent(SmartHomeComponent shc, int ebene) {
+    private void printComponent(SmartHomeComponent shc, int ebene) {
         try {
             Thread.sleep(200);
         } catch (InterruptedException ex) {
@@ -33,7 +33,7 @@ public class SwitchOffStrategy implements StrategieIF {
         }
     }
 
-    public void changeStatus(SmartHomeComponent shc, ListIterator actIterator) {
+    private void changeStatus(SmartHomeComponent shc, ListIterator actIterator) {
         change = new StartStatus(shc.getStatus());
         if ((shc.getComponentArt().equals("Lampe")) || (shc.getComponentArt().equals("Hintergrund-Licht")) || (shc.getComponentArt().equals("Energiesparlampe")) ||
                 (shc.getComponentArt().equals("Heizkoerper")) || (shc.getComponentArt().equals("Klimaanlage")) || (shc.getComponentArt().equals("Luftfilter")) ||
@@ -45,7 +45,7 @@ public class SwitchOffStrategy implements StrategieIF {
         }
     }
 
-    public void iterate(SmartHomeComponent shc) {
+    private void iterate(SmartHomeComponent shc) {
 
         ListIterator smartHomeComponentIterator1 = shc.getArraylist().listIterator();
         while (smartHomeComponentIterator1.hasNext()) {
@@ -75,5 +75,8 @@ public class SwitchOffStrategy implements StrategieIF {
         }
 
     }
-
+//Getter und Setter
+public Change getChange() {
+    return change;
+}
 }

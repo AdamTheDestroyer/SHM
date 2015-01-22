@@ -6,5 +6,5 @@ package smartHomeManager;
 public interface Change {
     double getStatus();
 
-    String getChangeText();
+    public String getChangeText();
 }

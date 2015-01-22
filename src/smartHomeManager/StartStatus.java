@@ -4,9 +4,9 @@ package smartHomeManager;
  * Created by Adambo on 01.01.2015.
  */
 public class StartStatus implements Change {
-    private final double startStatus;
+    final double startStatus;
 
-    StartStatus(double startStatus) {
+    public StartStatus(double startStatus) {
         this.startStatus = startStatus;
     }
 

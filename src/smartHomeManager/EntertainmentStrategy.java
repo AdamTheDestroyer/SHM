@@ -6,16 +6,12 @@ import java.util.ListIterator;
  * Created by Adambo on 03.01.2015.
  */
 public class EntertainmentStrategy implements StrategieIF {
-
-    protected final String ort;
-
-    protected EntertainmentStrategy(String ort) {
+    private Change change;
+    private final String ort;
+    public EntertainmentStrategy(String ort) {
         this.ort = ort;
     }
-
-    private Change change;
-
-    private ListIterator smartHomeComponentIterator1;
+    public ListIterator smartHomeComponentIterator1;
 
     public void execute(SmartHomeComponent shc) {
         changeStatus(shc, smartHomeComponentIterator1);
@@ -23,7 +19,7 @@ public class EntertainmentStrategy implements StrategieIF {
         iterate(shc);
     }
 
-    public void printComponent(SmartHomeComponent shc, int ebene) {
+    private void printComponent(SmartHomeComponent shc, int ebene) {
         try {
             Thread.sleep(200);
         } catch (InterruptedException ex) {
@@ -39,7 +35,7 @@ public class EntertainmentStrategy implements StrategieIF {
         }
     }
 
-    public void changeStatus(SmartHomeComponent shc, ListIterator actIterator) {
+    private void changeStatus(SmartHomeComponent shc, ListIterator actIterator) {
         change = new StartStatus(shc.getStatus());
 
         if (shc.getComponentArt().equals("TV") || shc.getComponentArt().equals("Musikanlage")) {
@@ -57,18 +53,18 @@ public class EntertainmentStrategy implements StrategieIF {
 
     }
 
-    public void keepStatus(SmartHomeComponent shc) {
+    private void keepStatus(SmartHomeComponent shc) {
         change = new StartStatus(shc.getStatus());
     }
 
 
-    public void iterate(SmartHomeComponent shc) {
+    private void iterate(SmartHomeComponent shc) {
 
         ListIterator smartHomeComponentIterator1 = shc.getArraylist().listIterator();
 
         while (smartHomeComponentIterator1.hasNext()) {
             SmartHomeComponent nextRecord1 = (SmartHomeComponent) smartHomeComponentIterator1.next();
-            if (nextRecord1.getName().equals(ort)) {
+            if (nextRecord1.getName().equals(getOrt())) {
                 changeStatus(nextRecord1, smartHomeComponentIterator1);
                 printComponent(nextRecord1, 1);
 
@@ -113,6 +109,14 @@ public class EntertainmentStrategy implements StrategieIF {
             iterate(nextRecord4);
         }
 
+    }
+
+    //Getter und Setter
+    public String getOrt() {
+        return ort;
+    }
+    public Change getChange() {
+        return change;
     }
 
 }

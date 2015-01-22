@@ -9,7 +9,7 @@ import java.util.ListIterator;
 public class LeavingStrategy implements StrategieIF {
 
     private Change change;
-    private ListIterator smartHomeComponentIterator1;
+    public ListIterator smartHomeComponentIterator1;
 
     public void execute(SmartHomeComponent shc) {
         changeStatus(shc, smartHomeComponentIterator1);
@@ -17,7 +17,7 @@ public class LeavingStrategy implements StrategieIF {
         iterate(shc);
     }
 
-    public void printComponent(SmartHomeComponent shc, int ebene) {
+    private void printComponent(SmartHomeComponent shc, int ebene) {
         try {
             Thread.sleep(200);
         } catch (InterruptedException ex) {
@@ -33,7 +33,7 @@ public class LeavingStrategy implements StrategieIF {
         }
     }
 
-    public void changeStatus(SmartHomeComponent shc, ListIterator actIterator) {
+    private void changeStatus(SmartHomeComponent shc, ListIterator actIterator) {
 
         change = new StartStatus(shc.getStatus());
 
@@ -50,7 +50,7 @@ public class LeavingStrategy implements StrategieIF {
         }
     }
 
-    public void iterate(SmartHomeComponent shc) {
+    private void iterate(SmartHomeComponent shc) {
 
         ListIterator smartHomeComponentIterator1 = shc.getArraylist().listIterator();
         while (smartHomeComponentIterator1.hasNext()) {
