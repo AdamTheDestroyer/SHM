@@ -4,7 +4,10 @@ import java.util.ListIterator;
 
 /**
  * Created by Adambo on 03.01.2015.
+ * Beschreibung: In dieser Strategie Klasse, die das Interface StrateieIF implementiert,
+ * werden anhand der zu dieser Strategie notwendigen Ortsangabe die Entertainment-Geräte angeschaltet.
  */
+
 public class EntertainmentStrategy implements StrategieIF {
     private Change change;
     private final String ort;
@@ -19,6 +22,8 @@ public class EntertainmentStrategy implements StrategieIF {
         iterate(shc);
     }
 
+    // Diese Methode macht die Konsolenausgabe, abhängig davon in welcher Iteration (Ebene) sich der Iterator befindet.
+    //Die Ausgabe wird verzögert ausgegeben.
     private void printComponent(SmartHomeComponent shc, int ebene) {
         try {
             Thread.sleep(200);
@@ -35,6 +40,10 @@ public class EntertainmentStrategy implements StrategieIF {
         }
     }
 
+    //In dieser Methode werden die Stati der einzelenen Leafs verändert. Dazu wird der Decorator benutzt.
+    //Dazu wird in der StartStaus Decorator Klasse, der Anfangsstatus gespeichert und im Change-Objekt (des Interfaces)
+    //zurückgegeben. Jede weitere Änderung der Stati wird in der Reducing-Klasse (Dekorator) geändert und in das Change Objekt zurückgeschrieben.
+    //Gewrappt.
     private void changeStatus(SmartHomeComponent shc, ListIterator actIterator) {
         change = new StartStatus(shc.getStatus());
 
@@ -53,11 +62,13 @@ public class EntertainmentStrategy implements StrategieIF {
 
     }
 
+    //Für die spezielle Ausfühtung  der Leafs, die nicht in der Ortsangabe, enhalten sind,
+    // wird hier im StartStatus-Dekorator der Status gesetzt.
     private void keepStatus(SmartHomeComponent shc) {
         change = new StartStatus(shc.getStatus());
     }
 
-
+    //Klassischer Iterator der in die drei festgelegten Iterierungstierfen vordringt und jeden Leaf einzeln in die Logik sendet.
     private void iterate(SmartHomeComponent shc) {
 
         ListIterator smartHomeComponentIterator1 = shc.getArraylist().listIterator();

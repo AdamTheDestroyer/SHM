@@ -8,6 +8,7 @@ import java.sql.Time;
 import java.util.*;
 
 /*
+ * Link:https://github.com/jeancaffou/Analemma
  * Calculate sunset and sunrise on a given day on a given location
  *
  * GPL, MIT License

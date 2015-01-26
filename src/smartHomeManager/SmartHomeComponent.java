@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 /**
  * Created by Adambo on 25.12.2014.
+ * Beschreibung: Abstrakte Klasse (Component) des Composite Patterns, die die Ausgangs variablen und Methoden definiert.
  */
 
 public abstract class SmartHomeComponent implements SmartHomeComponentIF {

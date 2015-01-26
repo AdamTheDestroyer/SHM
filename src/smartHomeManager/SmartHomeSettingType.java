@@ -2,6 +2,8 @@ package smartHomeManager;
 
 /**
  * Created by Adambo on 25.12.2014.
+ * Beschreibung: Composite der Abstrakten Component Klasse
+ * In diesem Component wird ein Setting Type definiert.
  */
 public class SmartHomeSettingType extends SmartHomeComponent {
 

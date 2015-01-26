@@ -4,6 +4,9 @@ import java.util.ListIterator;
 
 /**
  * Created by Adambo on 03.01.2015.
+ * In dieser Klasse werden alle Leafs abgeschaltet (Status = 0), da man die Wohnung verlässt.
+ * Alle Security Gerätschaften (Leafs) werden aktiviert
+ * (Also Türen und Fenster geschlossen und Überwachungslkamera an gemacht)
  */
 
 public class LeavingStrategy implements StrategieIF {
@@ -11,12 +14,15 @@ public class LeavingStrategy implements StrategieIF {
     private Change change;
     public ListIterator smartHomeComponentIterator1;
 
+    //Wird von der StartSmartHome Klasse aufgerufen
     public void execute(SmartHomeComponent shc) {
         changeStatus(shc, smartHomeComponentIterator1);
         printComponent(shc, 1);
         iterate(shc);
     }
 
+    // Diese Methode macht die Konsolenausgabe, abhängig davon in welcher Iteration (Ebene) sich der Iterator befindet.
+    //Die Ausgabe wird verzögert ausgegeben.
     private void printComponent(SmartHomeComponent shc, int ebene) {
         try {
             Thread.sleep(200);
@@ -33,6 +39,10 @@ public class LeavingStrategy implements StrategieIF {
         }
     }
 
+    //In dieser Methode werden die Stati der einzelenen Leafs verändert. Dazu wird der Decorator benutzt.
+    //Dazu wird in der StartStaus Decorator Klasse, der Anfangsstatus gespeichert und im Change-Objekt (des Interfaces)
+    //zurückgegeben. Jede weitere Änderung der Stati wird in der Reducing-Klasse (Dekorator) geändert und in das Change Objekt zurückgeschrieben.
+    //Gewrappt.
     private void changeStatus(SmartHomeComponent shc, ListIterator actIterator) {
 
         change = new StartStatus(shc.getStatus());
@@ -50,6 +60,7 @@ public class LeavingStrategy implements StrategieIF {
         }
     }
 
+    //Klassischer Iterator der in die drei festgelegten Iterierungstierfen vordringt und jeden Leaf einzeln in die Logik sendet.
     private void iterate(SmartHomeComponent shc) {
 
         ListIterator smartHomeComponentIterator1 = shc.getArraylist().listIterator();

@@ -2,6 +2,8 @@ package smartHomeManager;
 
 /**
  * Created by Adambo on 25.12.2014.
+ * Beschreibung: Composite der Abstrakten Component Klasse
+ * In diesem Composite wird eine Location definiert.
  */
 public class SmartHomeLocation extends SmartHomeComponent {
 

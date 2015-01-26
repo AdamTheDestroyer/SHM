@@ -2,6 +2,7 @@ package smartHomeManager;
 
 /**
  * Created by Adambo on 01.01.2015.
+ * Beschreibung: Dekoratorklasse, die den neuen Wert setzt und als Change-Objekt zurückgibt.
  */
 public class Reducing implements Change {
 
@@ -14,11 +15,14 @@ public class Reducing implements Change {
         this.reducingRate = reducingRate;
     }
 
+    //Paramter reducingRate wird hier zurückgegeben.
     @Override
     public double getStatus() {
         return reducingRate;
     }
 
+    //Abhängig davon ob der Status des aktuellen Leafs, bereits den Zielstatus erreicht hat, wird hier eine Nachricht zurückgegeben
+    //und das aktuelle ChangeObjekt überschrieben.
     @Override
     public String getChangeText() {
         if (change.getStatus() == getStatus()) {

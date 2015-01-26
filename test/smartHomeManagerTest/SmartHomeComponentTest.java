@@ -45,10 +45,10 @@ public class SmartHomeComponentTest {
 	@Test
 	public void testGetComponentArt_1()
 		throws Exception {
-		SmartHomeDevice smartHomeDevice = new SmartHomeDevice("", "JSchneider", "", 1.0);
+		SmartHomeDevice smartHomeDevice = new SmartHomeDevice("", "testString", "", 1.0);
 		smartHomeDevice.add(new SmartHomeDevice("", "", "", 1.0));
 		String result = smartHomeDevice.getComponentArt();
-		assertEquals("JSchneider", result);
+		assertEquals("testString", result);
 	}
 
 	/**
@@ -57,10 +57,10 @@ public class SmartHomeComponentTest {
 	@Test
 	public void testGetDescription_1()
 		throws Exception {
-		SmartHomeDevice smartHomeDevice = new SmartHomeDevice("", "", "JSchneider", 1.0);
+		SmartHomeDevice smartHomeDevice = new SmartHomeDevice("", "", "testString", 1.0);
 		smartHomeDevice.add(new SmartHomeDevice("", "", "", 1.0));
 		String result = smartHomeDevice.getDescription();
-		assertEquals("JSchneider", result);
+		assertEquals("testString", result);
 	}
 
 	/**
@@ -69,10 +69,10 @@ public class SmartHomeComponentTest {
 	@Test
 	public void testGetName_1()
 		throws Exception {
-		SmartHomeDevice smartHomeDevice = new SmartHomeDevice("JSchneider", "", "", 1.0);
+		SmartHomeDevice smartHomeDevice = new SmartHomeDevice("testString", "", "", 1.0);
 		smartHomeDevice.add(new SmartHomeDevice("", "", "", 1.0));
 		String result = smartHomeDevice.getName();
-		assertEquals("JSchneider", result);
+		assertEquals("testString", result);
 	}
 
 	/**

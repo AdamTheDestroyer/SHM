@@ -4,6 +4,11 @@ import org.junit.Test;
 
 /**
  * Created by Adambo on 25.12.2014.
+ * Beschreibung: In dieser Klasse werden die Elemente des Composite Patterns definiert
+ * und anschließend wird eine Strategie gewählt und ausgeführt.
+ * Es wird hier auf die klassische Main-Methode verzichtet.
+ * Stattdessen wird hier ein Junit test verwendet um die SmartHome Definition und Ausführung zu starten.
+ * Wenn mehrere Strategien nacheinander gestartet werden, so wird der zuletzt eingestelle Status gespeichert und verwendet.
  */
 
 
@@ -109,7 +114,6 @@ public class StartSmartHome {
         security2.add(schliessanlage5);
         security2.add(schliessanlage6);
         security2.add(herd1);
-
         entertainment2.add(musik3);
         entertainment2.add(tv2);
 
