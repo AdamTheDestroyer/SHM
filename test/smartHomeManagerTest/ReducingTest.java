@@ -61,12 +61,4 @@ public class ReducingTest {
 		assertEquals(1.0, result, 0.1);
 	}
 
-	/**
-	 * Perform pre-test initialization.
-	 */
-	@Before
-	public void setUp()
-		throws Exception {
-		// add additional set up code here
-	}
 }
