@@ -86,7 +86,6 @@ public class AnalemmaTest {
 		int year = 2015;
 		int month = 0;
 		int day = 21;
-
 		Date result = Analemma.sunset(latitude, year, month, day);
 		assertNotNull(result);
 		assertEquals("Wed Jan 21 17:58:55 CET 2015", result.toString());

@@ -21,10 +21,7 @@ public class SmartHomeSettingTypeTest {
 		String description = "Spendet frischen Sauerstoff";
 		double status = 1.0;
 		boolean kindersicherung = true;
-
 		SmartHomeSettingType result = new SmartHomeSettingType(name, componentArt, description, status, kindersicherung);
-
-		// add additional test code here
 		assertNotNull(result);
 		assertEquals("Sauerstoffturbine", result.getName());
 		assertEquals(1.0, result.getStatus(), 1.0);

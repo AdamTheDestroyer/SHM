@@ -54,7 +54,7 @@ public class EntertainmentStrategyTest {
 	/**
 	 * Run the void execute(SmartHomeComponent) method test.
 	 */
-	@Ignore
+	@Test
 	public void testExecute_1()
 		throws Exception {
 		EntertainmentStrategy entertainmentStrategy = new EntertainmentStrategy("");
