@@ -3,7 +3,7 @@ package smartHomeManager;
 import java.util.ListIterator;
 
 /**
- * Created by Adambo on 03.01.2015.
+ * Created by Adam Kozma Master Wirtschaftsinformatik 1 on 03.01.2015.
  * In dieser Klasse werden alle Leafs abgeschaltet (Status = 0), da man die Wohnung verlässt.
  * Alle Security Gerätschaften (Leafs) werden aktiviert
  * (Also Türen und Fenster geschlossen und Überwachungslkamera an gemacht)

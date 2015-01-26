@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.ListIterator;
 
 /**
- * Created by Adambo on 26.12.2014.
+ * Created by Adam Kozma Master Wirtschaftsinformatik 1 on 26.12.2014.
  * Beschreibung: In dieser Klasse werden, alle Stromfressenden Geräte abgeschaltet, und sofern es gerade Nacht ist, die Energiesparlampen angeschaltet.
  * Nach einer Randomvariable wird die Temperatur von 0 bis 32 Grad bestimmt, und anhand der Temperatur werden die Heizgeräte energiesparend angeschaltet oder
  * entsprechend die Klimageräte zum Laufen gebracht.

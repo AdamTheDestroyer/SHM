@@ -6,7 +6,7 @@ import smartHomeManager.SmartHomeDevice;
 import smartHomeManager.SwitchOffStrategy;
 
 /**
- * @author Adambo
+ * @author Adam Kozma Master Wirtschaftsinformatik 1
  */
 public class SwitchOffStrategyTest {
 	/**

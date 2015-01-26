@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 /**
- * @author Adambo
+ * @author Adam Kozma Master Wirtschaftsinformatik 1
  */
 public class SmartHomeLocationTest {
 	/**
@@ -16,16 +16,16 @@ public class SmartHomeLocationTest {
 	@Test
 	public void testSmartHomeLocation_1()
 		throws Exception {
-		String name = "Michaela Schaffrath";
-		String componentArt = "erotisch";
-		String description = "Erotikdarsteller in Altersteilzeit";
+		String name = "Panic Room";
+		String componentArt = "Schutzraum";
+		String description = "Hier schließt man sich ein, falls Einbrecher im Haus sind";
 		double status = 1.0;
 		String ortzugehoerigkeit = "VHS";
 		SmartHomeLocation result = new SmartHomeLocation(name, componentArt, description, status, ortzugehoerigkeit);
 		assertNotNull(result);
-		assertEquals("Michaela Schaffrath", result.getName());
+		assertEquals("Panic Room", result.getName());
 		assertEquals(1.0, result.getStatus(), 1.0);
-		assertEquals("Erotikdarsteller in Altersteilzeit", result.getDescription());
-		assertEquals("erotisch", result.getComponentArt());
+		assertEquals("Hier schließt man sich ein, falls Einbrecher im Haus sind", result.getDescription());
+		assertEquals("Schutzraum", result.getComponentArt());
 	}
 }

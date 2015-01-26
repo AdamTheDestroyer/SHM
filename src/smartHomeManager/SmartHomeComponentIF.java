@@ -3,7 +3,7 @@ package smartHomeManager;
 import java.util.ArrayList;
 
 /**
- * Created by Adambo on 29.12.2014.
+ * Created by Adam Kozma Master Wirtschaftsinformatik 1 on 29.12.2014.
  * Bechreibung: Interface für das Composite Pattern.
  */
 public interface SmartHomeComponentIF {

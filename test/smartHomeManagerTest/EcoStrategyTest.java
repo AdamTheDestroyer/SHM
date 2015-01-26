@@ -7,7 +7,7 @@ import smartHomeManager.SmartHomeComponent;
 import smartHomeManager.SmartHomeDevice;
 
 /**
- * @author Adambo
+ * @author Adam Kozma Master Wirtschaftsinformatik 1
  */
 public class EcoStrategyTest {
 	/**
@@ -22,7 +22,7 @@ public class EcoStrategyTest {
         Assert.assertNotNull("Test ob not NULL", ecoStrategy.getTemperature());
         Assert.assertNotNull("Test ob not NULL", ecoStrategy.getAbgang());
         Assert.assertNotNull("Test ob not NULL", ecoStrategy.getAufgang());
-        Assert.assertNotNull("Hier wird auf not NULL überprüft",ecoStrategy.getTemperature());
+        Assert.assertNotNull("Test ob not NULL", ecoStrategy.getTemperature());
         Assert.assertNotNull("Test ob not NULL", ecoStrategy.getAbgang());
         Assert.assertNotNull("Test ob not NULL", ecoStrategy.getAufgang());
 	}

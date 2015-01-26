@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 /**
- * @author Adambo
+ * @author Adam Kozma Master Wirtschaftsinformatik 1
  */
 public class SmartHomeSettingTypeTest {
 	/**
@@ -16,9 +16,9 @@ public class SmartHomeSettingTypeTest {
 	@Test
 	public void testSmartHomeSettingType_1()
 		throws Exception {
-		String name = "mickey mouse";
-		String componentArt = "zeichentrick";
-		String description = "Disney-Trickfilm-Figur";
+		String name = "Sauerstoffturbine";
+		String componentArt = "Sauerstoffmaschine";
+		String description = "Spendet frischen Sauerstoff";
 		double status = 1.0;
 		boolean kindersicherung = true;
 
@@ -26,9 +26,9 @@ public class SmartHomeSettingTypeTest {
 
 		// add additional test code here
 		assertNotNull(result);
-		assertEquals("mickey mouse", result.getName());
+		assertEquals("Sauerstoffturbine", result.getName());
 		assertEquals(1.0, result.getStatus(), 1.0);
-		assertEquals("Disney-Trickfilm-Figur", result.getDescription());
-		assertEquals("zeichentrick", result.getComponentArt());
+		assertEquals("Spendet frischen Sauerstoff", result.getDescription());
+		assertEquals("Sauerstoffmaschine", result.getComponentArt());
 	}
 }

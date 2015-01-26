@@ -5,7 +5,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
 /**
- * @author Adambo
+ * @author Adam Kozma Master Wirtschaftsinformatik 1
  */
 @RunWith(Suite.class)
 @Suite.SuiteClasses({

@@ -3,7 +3,7 @@ package smartHomeManager;
 import java.util.ListIterator;
 
 /**
- * Created by Adambo on 03.01.2015.
+ * Created by Adam Kozma Master Wirtschaftsinformatik 1 on 03.01.2015.
  * Beschreibung: In dieser Strategie Klasse, die das Interface StrateieIF implementiert,
  * werden anhand der zu dieser Strategie notwendigen Ortsangabe die Entertainment-Geräte angeschaltet.
  */

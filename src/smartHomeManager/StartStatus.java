@@ -1,7 +1,7 @@
 package smartHomeManager;
 
 /**
- * Created by Adambo on 01.01.2015.
+ * Created by Adam Kozma Master Wirtschaftsinformatik 1 on 01.01.2015.
  * Beschreibung: In dieser Dekoration Klasse wird der Start Status übergeben und in das Dekorator Objekt Change zurückgegeben.
  */
 public class StartStatus implements Change {

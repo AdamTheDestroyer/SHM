@@ -1,9 +1,5 @@
 package smartHomeManager;
 
-/**
- * Created by Adambo on 15.01.2015.
- */
-
 import java.sql.Time;
 import java.util.*;
 

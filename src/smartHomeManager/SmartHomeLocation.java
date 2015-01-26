@@ -1,7 +1,7 @@
 package smartHomeManager;
 
 /**
- * Created by Adambo on 25.12.2014.
+ * Created by Adam Kozma Master Wirtschaftsinformatik 1 on 25.12.2014.
  * Beschreibung: Composite der Abstrakten Component Klasse
  * In diesem Composite wird eine Location definiert.
  */

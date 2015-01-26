@@ -3,7 +3,7 @@ package smartHomeManager;
 import java.util.ArrayList;
 
 /**
- * Created by Adambo on 25.12.2014.
+ * Created by Adam Kozma Master Wirtschaftsinformatik 1 on 25.12.2014.
  * Beschreibung: Abstrakte Klasse (Component) des Composite Patterns, die die Ausgangs variablen und Methoden definiert.
  */
 

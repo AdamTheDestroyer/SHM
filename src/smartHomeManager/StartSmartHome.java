@@ -3,7 +3,7 @@ package smartHomeManager;
 import org.junit.Test;
 
 /**
- * Created by Adambo on 25.12.2014.
+ * Created by Adam Kozma Master Wirtschaftsinformatik 1 on 25.12.2014.
  * Beschreibung: In dieser Klasse werden die Elemente des Composite Patterns definiert
  * und anschließend wird eine Strategie gewählt und ausgeführt.
  * Es wird hier auf die klassische Main-Methode verzichtet.

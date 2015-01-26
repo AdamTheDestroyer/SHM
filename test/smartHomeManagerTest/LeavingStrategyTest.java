@@ -6,7 +6,7 @@ import smartHomeManager.SmartHomeComponent;
 import smartHomeManager.SmartHomeDevice;
 
 /**
- * @author Adambo
+ * @author Adam Kozma Master Wirtschaftsinformatik 1
  */
 public class LeavingStrategyTest {
 	/**
